@@ -5,7 +5,7 @@
           target_schema='snapshots',
           strategy='check',
           unique_key='o_orderkey',
-          check_cols=['status'],
+          check_cols=['o_orderstatus'],
         )
     }}
 
