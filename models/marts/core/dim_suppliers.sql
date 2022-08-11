@@ -26,6 +26,7 @@ final as (
         supplier.supplier_address,
         nation.name as nation,
         region.name as region,
+        -- region.regionalized_name,
         supplier.phone_number,
         supplier.account_balance
     from
