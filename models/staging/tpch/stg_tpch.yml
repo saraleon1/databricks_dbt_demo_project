@@ -56,6 +56,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: name
+        tests:
+          - accepted_values:
+              values: ['AFRICA', 'ASIA', 'AMERICA','EUROPE','MIDDLE EAST']
                 
   - name: stg_tpch_suppliers
     description: staging layer for suppliers data

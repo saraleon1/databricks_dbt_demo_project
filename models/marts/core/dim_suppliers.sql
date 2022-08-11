@@ -15,6 +15,7 @@ nation as (
 ),
 region as (
 
+    -- select * from {{ ref('int_region') }}
     select * from {{ ref('stg_tpch_regions') }}
 
 ),
@@ -26,6 +27,7 @@ final as (
         supplier.supplier_address,
         nation.name as nation,
         region.name as region,
+        -- region.regionalized_name,
         supplier.phone_number,
         supplier.account_balance
     from
