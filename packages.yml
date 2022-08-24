@@ -7,3 +7,4 @@ packages:
     version: 0.8.0
   - package: dbt-labs/spark_utils
     version: 0.3.0
+  - git: "https://{{env_var('DBT_ENV_SECRET_GIT_CREDENTIAL')}}@github.com/saraleon1/databricks_package_test.git" # git HTTPS URL
