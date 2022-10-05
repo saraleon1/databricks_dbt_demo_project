@@ -8,3 +8,7 @@ packages:
   - package: dbt-labs/spark_utils
     version: 0.3.0
   - git: "https://{{env_var('DBT_ENV_SECRET_GIT_CREDENTIAL')}}@github.com/saraleon1/databricks_package_test.git" # git HTTPS URL
+  - package: elementary-data/elementary
+    version: 0.5.0
+    ## compatible with Elementary CLI version 0.5.0
+    ## see docs: https://docs.elementary-data.com/

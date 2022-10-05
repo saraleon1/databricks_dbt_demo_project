@@ -15,7 +15,13 @@ models:
       - name: part_key
         tests:
           - unique
-          - not_null
+          - not_null:
+              name: test_123
+      - name: manufacturer
+        tests:
+          - unique
+          - not_null:
+              name: test_1234              
 
   - name: dim_suppliers
     columns:
