@@ -54,4 +54,7 @@ models:
 
 snapshots:
   file_format: delta
+
+tests:
+  +store_failures: true  # all tests
     
