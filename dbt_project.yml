@@ -47,6 +47,11 @@ models:
       marts:
           materialized: table
 
+  ## elementary models will be created in the schema '<your_schema>_elementary'
+  ## see docs: https://docs.elementary-data.com/
+  elementary:
+    +schema: "elementary"
+
 snapshots:
   file_format: delta
     

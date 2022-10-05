@@ -1,0 +1,9 @@
+elementary:
+  outputs:
+    default:
+      type: databricks
+      host: dbc-c7c89cba-cf9b.cloud.databricks.com
+      http_path: /sql/1.0/endpoints/07bb14a8596beb78
+      schema: dbt_sleon_dev_elementary
+      token: {{ env_var('DBT_ENV_SECRET_DB_PAT') }}
+      threads: 6
