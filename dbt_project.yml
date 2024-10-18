@@ -40,8 +40,6 @@ models:
 
   databricks_demo:
       # Applies to all files under models/example/
-      example:
-          materialized: view
       staging:
           materialized: view
       marts:
@@ -52,9 +50,15 @@ models:
   elementary:
     +schema: "elementary"
 
+
 snapshots:
   file_format: delta
 
 tests:
   +store_failures: true  # all tests
+  file_format: delta
+
+on-run-end: 
+  - "{{ store_test_results(results) }}"
+  - "{{ centralize_test_failures(results) }}"
     
